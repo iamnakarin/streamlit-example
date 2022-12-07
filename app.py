@@ -1,5 +1,4 @@
 #from sklearn import tree
-import sklearn
 import tree
 import streamlit as st
 model = tree.DecisionTreeClassifier()
