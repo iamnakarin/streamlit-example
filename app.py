@@ -1,30 +1,27 @@
+from sklearn import tree
 import streamlit as st
-
-import numpy as np
-import pandas as pd
-
-st.title('My first app')
-
-st.write("Here's our first attempt at using data to create a table:")
-st.write(pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second column': [10, 20, 30, 40]
-}))
-
-st.sidebar.write(" I am a sidebar")
-xx = st.sidebar.checkbox('sidebar checkbox')
-
-if xx:
-    st.sidebar.write('you checked a box!')
-else:
-    st.sidebar.write('Box is not checked')
-
-text = st.text_area(
-    "Your text",
-    "I dreamed a dream."
-)
-
-if not text:
-    text = "Emptiness"
-
-st.write(text+" ---> auto add message")
+model = tree.DecisionTreeClassifier()
+feature = [ [60,69,3],
+            [61,67,3],
+            [62,62,5],
+            [63,65,7],
+            [64,67,7],
+            [67,59,9],
+            [67,59,14],
+            [65,70,13],
+            [62,80,12],
+            [61,90,8],
+            [64,80,5],
+            [71,61,9],
+            [38,79,15],
+            [39,79,15],
+            [39,79,16],
+            [38,86,12],
+            [40,79,14]
+          ]
+label = ['Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Cloudy',
+        'Cloudy','Cloudy','Light Rain','Light Rain','Cloudy','Cloudy',
+         'Light Rain','Light Rain','Light Rain','Light Rain','Light Rain'
+]
+model.fit(feature,label)
+st.write(model.predict([[40,80,15]]))
