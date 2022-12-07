@@ -1,6 +1,4 @@
 from sklearn import tree
-import streamlit as st
-
 model = tree.DecisionTreeClassifier()
 feature = [ [60,69,3],
             [61,67,3],
@@ -24,5 +22,9 @@ label = ['Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Cloudy',
         'Cloudy','Cloudy','Light Rain','Light Rain','Cloudy','Cloudy',
          'Light Rain','Light Rain','Light Rain','Light Rain','Light Rain'
 ]
+txt1 =int(st.input_text('Input here:'))
+txt2 =int(st.input_text('Input here:'))
+txt3 =int(st.input_text('Input here:'))
 model.fit(feature,label)
-st.write(model.predict([[40,80,15]]))
+st.write(model.predict([[txt1,txt2,txt3]]))
+
