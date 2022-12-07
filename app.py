@@ -22,9 +22,9 @@ label = ['Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Cloudy',
         'Cloudy','Cloudy','Light Rain','Light Rain','Cloudy','Cloudy',
          'Light Rain','Light Rain','Light Rain','Light Rain','Light Rain'
 ]
-txt1 =st.input_text('Input here:')
-txt2 =st.input_text('Input here:')
-txt3 =st.input_text('Input here:')
+txt1 =st.number_input('Enter a number')
+txt2 =st.number_input('Enter a number')
+txt3 =st.number_input('Enter a number')
 model.fit(feature,label)
 st.write(model.predict([[txt1,txt2,txt3]]))
 
