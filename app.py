@@ -30,6 +30,7 @@ txt2=st.number_input('Enter a number2')
 txt3=st.number_input('Enter a number3')
 model.fit(feature,label)
 st.write(model.predict([[txt1,txt2,txt3]]))
+uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
   df = pd.read_csv(uploaded_file)
-  st.write(df)
+  st.write(dataframe)
