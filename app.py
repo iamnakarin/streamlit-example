@@ -8,7 +8,7 @@ if uploaded_file is not None:
   feature = pd.read_csv(uploaded_file)
   st.write(feature)
             
-uploaded_file2 = st.file_uploader("Choose a file")
+uploaded_file2 = st.file_uploader("Choose a file2")
 if uploaded_file2 is not None:
   label = pd.read_csv(uploaded_file2)
   st.write(label)
