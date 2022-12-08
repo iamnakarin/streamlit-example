@@ -1,6 +1,7 @@
 
 from sklearn import tree
 import streamlit as st
+import pandas as pd
 model = tree.DecisionTreeClassifier()
 feature = [ [60,69,3],
             [61,67,3],
