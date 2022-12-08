@@ -3,8 +3,8 @@ from sklearn import tree
 import streamlit as st
 import pandas as pd
 model = tree.DecisionTreeClassifier()
-feature =pd.read_csv('https://apps.samsenwit.ac.th/vichakarn/file/data.csv')
-label =pd.read_csv('https://apps.samsenwit.ac.th/vichakarn/file/label.csv')
+feature =pd.read_csv('https://192.168.80.21/vichakarn/file/data.csv')
+label =pd.read_csv('https://192.168.80.21/vichakarn/file/label.csv')
 #txt1=st.number_input('Enter a number1')
 #txt2=st.number_input('Enter a number2')
 #txt3=st.number_input('Enter a number3')
