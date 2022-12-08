@@ -1,15 +1,31 @@
 
 from sklearn import tree
 import streamlit as st
-import pandas as pd
 model = tree.DecisionTreeClassifier()
-url1=st.file_uploader("https://apps.samsenwit.ac.th/vichakarn/file/data.csv", type={"csv", "txt"})
-feature=pd.read_csv(url1)
-url2=st.file_uploader("ttps://apps.samsenwit.ac.th/vichakarn/file/label.csvv", type={"csv", "txt"})
-label =pd.read_csv(url2)
-#txt1=st.number_input('Enter a number1')
-#txt2=st.number_input('Enter a number2')
-#txt3=st.number_input('Enter a number3')
-#model.fit(feature,label)
-#st.write(model.predict([[txt1,txt2,txt3]]))
-st.write(label)
+feature = [ [60,69,3],
+            [61,67,3],
+            [62,62,5],
+            [63,65,7],
+            [64,67,7],
+            [67,59,9],
+            [67,59,14],
+            [65,70,13],
+            [62,80,12],
+            [61,90,8],
+            [64,80,5],
+            [71,61,9],
+            [38,79,15],
+            [39,79,15],
+            [39,79,16],
+            [38,86,12],
+            [40,79,14]
+          ]
+label = ['Cloudy','Cloudy','Cloudy','Cloudy','Cloudy','Cloudy',
+        'Cloudy','Cloudy','Light Rain','Light Rain','Cloudy','Cloudy',
+         'Light Rain','Light Rain','Light Rain','Light Rain','Light Rain'
+]
+txt1=st.number_input('Enter a number1')
+txt2=st.number_input('Enter a number2')
+txt3=st.number_input('Enter a number3')
+model.fit(feature,label)
+st.write(model.predict([[txt1,txt2,txt3]]))
